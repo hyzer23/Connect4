@@ -17,6 +17,8 @@ $(document).ready(function() {
             if(isValid($(this).attr("id"))){
                 $(this).css("background-color", colors[player]); // assigns cell color to the color of the player that clicked it
                 $(this).attr("data-player", player); 
+                let audio = new Audio('piece-drop.mp3');
+                audio.play();
                 if(checkWin(player)){
                     alert(colors[player] + " has won!");
                     winner = player;
